@@ -1,16 +1,16 @@
-### Hi there 👋
 
-<!--
-**munnificent/munnificent** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# Munificent
+![заголовок](https://github.com/munnificent/munnificent/blob/main/header.png)
+Привет! Я Munificent, программист с широким спектром интересов и навыков. Занимаюсь разнообразной деятельностью, от разработки сайтов до создания ботов для Telegram на языке Python. Моя цель - создавать качественное программное обеспечение, которое удовлетворяет потребности пользователей.
 
-Here are some ideas to get you started:
+## Статистика
+ ![Longest Streak](https://github-readme-streak-stats.herokuapp.com/?user=munnificent&theme=material-palenight)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=munnificent&layout=compact&langs_count=6&theme=material-palenight)
+
+## Помни
+
+[![Readme Quotes](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)](https://github.com/piyushsuthar/github-readme-quotes)
+
+
+
