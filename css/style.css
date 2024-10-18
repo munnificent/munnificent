@@ -1,0 +1,152 @@
+/* style.css */
+/* Использование переменных CSS */
+:root {
+    --primary-color: #fdc830;
+    --secondary-color: #f37335;
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --font-family: 'Roboto', sans-serif;
+}
+
+/* Общие стили */
+body {
+    font-family: var(--font-family);
+    background: var(--background-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+/* Анимированный неоновый фон */
+.neon-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #ff3cac, #784ba0, #2b86c5, #fdc830);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    z-index: -2;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Контейнер для содержимого */
+.content-box {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 10% auto 0;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.intro-content {
+    text-align: center;
+}
+
+.intro-content .profile-pic {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.intro-content h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.intro-content .occupation {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    color: #ddd;
+    font-weight: 400;
+}
+
+.intro-content .skills {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    color: #bbb;
+}
+
+.social-links {
+    margin-bottom: 1.5em;
+}
+
+.social-links a {
+    color: var(--text-color);
+    font-size: 2em;
+    margin: 0 10px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+    transform: scale(1.2) rotate(10deg);
+    color: var(--primary-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: var(--primary-color);
+    color: var(--background-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-5px);
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+    .content-box {
+        margin-top: 20%;
+        padding: 20px;
+    }
+
+    .intro-content h1 {
+        font-size: 2em;
+    }
+
+    .intro-content .occupation,
+    .intro-content .skills {
+        font-size: 1em;
+    }
+
+    .social-links a {
+        font-size: 1.5em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}

@@ -1,0 +1,89 @@
+<!-- pages/project.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Ваше Имя - Проекты</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Портфолио проектов Frontend-разработчика Ваше Имя. Ознакомьтесь с моими работами и узнайте больше обо мне.">
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style-project.css">
+    <!-- Подключение шрифтов Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Подключение Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Подключение Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Фавикон -->
+    <link rel="icon" href="../assets/icons/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="../index.html">Ваше Имя</a>
+                </div>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="nav-toggle-label">
+                    <span></span>
+                </label>
+                <ul class="nav-list">
+                    <li><a href="#projects">Проекты</a></li>
+                    <li><a href="#about">Обо мне</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Раздел с проектами -->
+    <section id="projects" class="section">
+        <h2>Мои проекты</h2>
+        <div class="projects-grid">
+            <!-- Карточки проектов (8 штук) -->
+            <!-- Повторите блок ниже для каждого проекта -->
+            <div class="project-card">
+                <img src="../assets/images/проект1.jpg" alt="Проект 1">
+                <div class="project-info">
+                    <h3>Название проекта 1</h3>
+                </div>
+            </div>
+            <!-- ... остальные проекты ... -->
+            <!-- Всего 8 проектов -->
+            <!-- Закройте тег </div> после последнего проекта -->
+        </div>
+    </section>
+
+    <!-- Раздел "Обо мне" -->
+    <section id="about" class="section">
+        <h2>Обо мне</h2>
+        <div class="about-content">
+            <img src="../assets/images/profile.jpg" alt="Мое фото" class="profile-pic">
+            <p>Я - Frontend разработчик с опытом работы в создании современных веб-приложений. Образование: Бакалавр компьютерных наук. Навыки: HTML, CSS, JavaScript, React, Node.js. Хобби: программирование, дизайн, игры.</p>
+        </div>
+    </section>
+
+    <!-- Раздел с контактами -->
+    <section id="contact" class="section">
+        <h2>Контакты</h2>
+        <div class="social-links">
+            <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://t.me/yourusername" target="_blank" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://www.instagram.com/yourusername" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <!-- Добавьте другие социальные сети при необходимости -->
+        </div>
+    </section>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <p>&copy; 2023 Ваше Имя</p>
+    </footer>
+
+    <!-- Подключение JavaScript -->
+    <script src="../js/main.js" defer></script>
+</body>
+</html>
