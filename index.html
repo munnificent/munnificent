@@ -1,72 +1,115 @@
-<!DOCTYPE html>
-<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Портфолио Munificent</title>
+  <title>Сагдатов «Munificent» Ескендыр</title>
   
-  <!-- Подключение шрифтов Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <!-- Open Graph мета-теги -->
+  <meta property="og:title" content="Сайт Сагдатова «Munificent» Ескендыра">
+  <meta property="og:description" content="Проекты, статьи, планы и контакты .">
+  <meta property="og:image" content="https://i.ibb.co.com/gvXQyd8/header.png">
+  <meta property="og:url" content="https://www.munificent.net/>
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+
+  <!-- Twitter Card мета-теги -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Сайт Сагдатова «Munificent» Ескендыра">
+  <meta name="twitter:description" content="Проекты, статьи, планы и контакты Ескендыра.">
+  <meta name="twitter:image" content="https://i.ibb.co.com/gvXQyd8/header.png">
+
+  <!-- Мета-теги для SEO -->
+  <meta name="description" content="Портфолио разработчика, педагога и хорошего парня Сагдатова Ескендир. Проекты, статьи, планы и контакты.">
+  <meta name="keywords" content="Сагдатов Ескендир, разработчик, портфолио, проекты, статьи, контакты">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Иконки сайта -->
+  <link rel="icon" href="assets\icons\favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="assets\icons\apple-touch-icon.png">
+  <link rel="icon" sizes="192x192" href="assets\icons\iandroid-chrome-192x192.png">
+
+  <!-- Манифест PWA -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Метатеги для устройств Apple -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+  <!-- Предзагрузка и подключение шрифтов -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins&display=swap" rel="stylesheet">
+  </noscript>
+
+  <!-- Предзапрос и префетч -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
   
   <!-- Нормализация стилей -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   
   <!-- Подключение Font Awesome для иконок -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
   <script src="https://kit.fontawesome.com/8e7ed672a0.js" crossorigin="anonymous"></script>
   
   <!-- Подключение собственного CSS -->
   <link rel="stylesheet" href="style-project.css">
-  
+
+  <
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.munificent.net/">
+
+  <!-- Тема цвета для мобильных устройств -->
+  <meta name="theme-color" content="#eee">
 </head>
+
 <body>
   
   <!-- Hero Section -->
-  <section class="et-hero-tabs">
+  <header class="et-hero-tabs">
     <h1>Рад видеть тебя</h1>
     <h3>Коротко и наглядно обо мне, моих проектах и моих планах на будущее и еще пара ссылочек</h3>
-    <div class="et-hero-tabs-container">
+    <nav class="et-hero-tabs-container">
       <a class="et-hero-tab" href="#tab-about">Обо мне</a>
       <a class="et-hero-tab" href="#tab-projects">Проекты</a>
       <a class="et-hero-tab" href="#tab-articles">Статьи</a>
       <a class="et-hero-tab" href="#tab-plans">Планы</a>
       <a class="et-hero-tab" href="#tab-contacts">Контакты</a>
       <span class="et-hero-tab-slider"></span>
-    </div>
-  </section>
+    </nav>
+  </header>
 
   <!-- Main Content -->
   <main class="et-main">
     
     <!-- Раздел Обо мне -->
-<!-- Раздел Обо мне -->
-<section class="et-slide" id="tab-about">
-  <h2>Обо мне</h2>
-  <div class="about-container">
-    <!-- Карточка "Обо мне" -->
-    <div class="about-card">
-      <div class="about-thumbnail">
-        <img class="about-left" src="https://cdn2.hubspot.net/hubfs/322787/Mychefcom/images/BLOG/Header-Blog/photo-culinaire-pexels.jpg" alt="Фото обо мне"/>
+    <section class="et-slide" id="tab-about">
+      <h2>Обо мне</h2>
+      <div class="about-container">
+        <!-- Карточка "Обо мне" -->
+        <div class="about-card">
+          <div class="about-thumbnail">
+            <img class="about-left" src="https://cdn2.hubspot.net/hubfs/322787/Mychefcom/images/BLOG/Header-Blog/photo-culinaire-pexels.jpg" alt="Фото обо мне">
+          </div>
+          <div class="about-right">
+            <h1>Разработчик, педагог и хороший парень</h1>
+            <div class="about-separator"></div>
+            <p>Привет! Я Сагдатов Есқендір, опытный разработчик с увлечением к педагогике и стремлением помогать другим расти в IT-сфере. Моя цель — создавать качественные веб-приложения и делиться своими знаниями с сообществом.</p>
+          </div>
+          <div class="about-fab"><i class="fa fa-arrow-down fa-3x"></i></div>
+        </div>
       </div>
-      <div class="about-right">
-        <h1>Разработчик, педагог и хороший парень</h1>
-        <div class="about-separator"></div>
-        <p>Привет! Я Сагдатов Есқендір, опытный разработчик с увлечением к педагогике и стремлением помогать другим расти в IT-сфере. Моя цель — создавать качественные веб-приложения и делиться своими знаниями с сообществом.</p>
-      </div>
-      <div class="about-fab"><i class="fa fa-arrow-down fa-3x"></i></div>
-    </div>
-  </div>
-</section>
-
+    </section>
     
     <!-- Раздел Проекты -->
     <section class="et-slide" id="tab-projects">
       <h2>Проекты</h2>
       <div class="projects-container">
+ 
+      <div class="projects-container">
         <!-- Карточка проекта 1 -->
         <div class="card">
           <div class="imgContainer">
-            <img src="https://picsum.photos/id/1015/500" alt="FreeCourseYard">
+            <img src="https://picsum.photos/id/1015/500" alt="FreeCourseYard" loading="lazy">
             <div class="content">
               <h3>FreeCourseYard</h3>
               <div class="description">
@@ -176,56 +219,71 @@
             </div>
           </div>
         </div>
-        
       </div>
     </section>
     
     <!-- Раздел Статьи -->
     <section class="et-slide" id="tab-articles">
       <h2>Статьи</h2>
-      <p>something about articles</p>
+      <p>В этом разделе вы можете ознакомиться с моими последними статьями</p>
+      <!-- Карточки статей -->
+      <ul class="posts-box">
+        <!-- Здесь будут загружены карточки из JavaScript -->
+      </ul>
+      <!-- Модальное окно для отображения полной статьи -->
+      <div class="modal" id="modal-name">
+        <div class="modal-sandbox"></div>
+        <div class="modal-box">
+          <div class="modal-header">
+            <img src="" class="inner-img" alt="">
+          </div>
+          <div class="modal-body">
+            <h2 class="inner-title"></h2>
+            <div class="inner-text"></div>
+            <button class="prev-post">Предыдущая</button>
+            <button class="next-post">Следующая</button>
+            <button class="close-post">Закрыть</button>
+          </div>
+        </div>
+      </div>
     </section>
     
     <!-- Раздел Планы -->
     <section class="et-slide" id="tab-plans">
       <h2>Планы</h2>
-      <p>something about future plans</p>
+      <p>Планов нет, но как только они появятся, сразу напишу.</p>
     </section>
     
     <!-- Раздел Контакты -->
     <section class="et-slide" id="tab-contacts">
       <h2>Контакты</h2>
-      <p>mu contacts social media</p>
+      <p>Мои контакты в социальных сетях:</p>
       <div class="social">
-        <a href="www.linkedin.com/in/munificent-archon" target="_blank">
+        <a href="https://www.linkedin.com/in/munificent-archon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
           <i class="fab fa-linkedin-in"></i>
         </a>
-    
-        <a href="https://codepen.io/munnificent" target="_blank">
-          <i class="fab fa-codepen"></i>
-        </a>
-    
-        <a href="https://github.com/munnificent" target="_blank">
+        <a href="https://github.com/munnificent" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
           <i class="fab fa-github"></i>
         </a>
-    
-        <a href="https://www.instagram.com/munificent_archon/" target="_blank">
+        <a href="https://www.instagram.com/munificent_archon/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
           <i class="fab fa-instagram"></i>
         </a>
-    
-        <a href="https://t.me/munificent_archon" target="_blank">
-        <i class="fab fa-telegram "></i>
-      </a>
+        <a href="https://t.me/munificent_archon" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+          <i class="fab fa-telegram-plane"></i>
+        </a>
+        <a href="https://vk.com/dajenedumayte" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте">
+          <i class="fab fa-vk"></i>
+        </a>
       </div>
     </section>
     
   </main>
 
-  <!-- Подключение jQuery -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+  <!-- Подключение jQuery (проверьте, нужен ли jQuery для вашего сайта) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
   
   <!-- Подключение собственного JavaScript -->
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
   
 </body>
 </html>

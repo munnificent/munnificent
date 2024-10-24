@@ -14,6 +14,7 @@ a {
   color: inherit;
 }
 
+/* Общие стили для секций */
 .et-hero-tabs,
 .et-slide {
   display: flex;
@@ -41,9 +42,9 @@ a {
   max-width: 600px;
 }
 
+/* Навигационные табы */
 .et-hero-tabs-container {
   display: flex;
-  flex-direction: row;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -59,14 +60,14 @@ a {
 }
 
 .et-hero-tab {
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1;
   color: #000;
+  font-size: 0.8rem;
   letter-spacing: 0.1rem;
   transition: all 0.3s ease;
-  font-size: 0.8rem;
 }
 
 .et-hero-tab:hover,
@@ -84,13 +85,14 @@ a {
   transition: left 0.3s ease, width 0.3s ease;
 }
 
+/* Секция "О нас" */
 .about-card {
   position: relative;
-  height: 450px;
   width: 900px;
+  height: 450px;
   margin: 100px auto;
   background-color: #fff;
-  box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 93px rgba(0, 0, 0, 0.75);
 }
 
 .about-thumbnail {
@@ -98,24 +100,23 @@ a {
   position: relative;
   left: 30px;
   top: -30px;
-  height: 320px;
   width: 530px;
-  box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+  height: 320px;
+  box-shadow: 10px 10px 60px rgba(0, 0, 0, 0.75);
   overflow: hidden;
 }
 
 .about-thumbnail img {
   position: absolute;
-  left: 50%;
   top: 50%;
-  height: auto;
+  left: 50%;
   width: 100%;
+  height: auto;
   transform: translate(-50%, -50%);
 }
 
 .about-right {
-  margin-left: 590px;
-  margin-right: 20px;
+  margin: 0 20px 0 590px;
 }
 
 .about-right h1 {
@@ -125,31 +126,32 @@ a {
 }
 
 .about-right p {
-  text-align: justify;
   padding-top: 10px;
   font-size: 0.95rem;
-  line-height: 150%;
+  line-height: 1.5;
   color: #4B4B4B;
+  text-align: justify;
 }
 
 .about-fab {
   position: absolute;
   right: 50px;
   bottom: -40px;
-  padding-top: 18px;
-  background-color: #1875D0;
   width: 80px;
   height: 80px;
+  padding-top: 18px;
+  background-color: #1875D0;
   color: #fff;
   text-align: center;
   border-radius: 50%;
-  box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.75);
 }
 
 .about-fab:hover {
   background-color: #005bb5;
 }
 
+/* Секция проектов */
 .projects-container {
   display: flex;
   flex-wrap: wrap;
@@ -160,18 +162,18 @@ a {
 }
 
 .card {
+  width: 300px;
   background-color: #F0F5F8;
   border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  width: 300px;
   overflow: hidden;
   font-family: 'Poppins', sans-serif;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-10px);
-  box-shadow: rgba(0, 0, 0, 0.45) 0px 10px 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.45);
 }
 
 .imgContainer {
@@ -191,17 +193,17 @@ a {
 }
 
 .content h3 {
-  font-size: 1.2rem;
   margin-bottom: 10px;
-  text-align: center;
+  font-size: 1.2rem;
   color: #333;
+  text-align: center;
 }
 
 .description {
   height: 80px;
-  overflow: hidden;
-  text-align: justify;
   color: #555;
+  text-align: justify;
+  overflow: hidden;
 }
 
 .linkDiv {
@@ -211,11 +213,11 @@ a {
 }
 
 .linkDiv a {
-  text-decoration: none;
-  color: #66B1F1;
-  font-weight: bold;
   display: flex;
   align-items: center;
+  color: #66B1F1;
+  font-weight: bold;
+  text-decoration: none;
   transition: color 0.3s ease;
 }
 
@@ -227,6 +229,7 @@ a {
   margin-left: 5px;
 }
 
+/* Социальные ссылки */
 .social {
   display: flex;
   justify-content: center;
@@ -236,9 +239,9 @@ a {
 }
 
 .social a {
+  margin: 10px;
   color: #2D1F28;
   text-decoration: none;
-  margin: 10px;
 }
 
 .social:hover a {
@@ -248,11 +251,170 @@ a {
 
 .social:hover a:hover {
   opacity: 1;
-  transition: 0.5s;
 }
 
-/* Media queries */
+/* Стили для карточек статей */
 
+
+
+#tab-articles h2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* Контейнер карточек */
+.posts-box {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 40px 10px;
+  text-align: center;
+  list-style: none;
+}
+
+.posts-box li {
+  display: inline-block;
+  width: 320px;
+  max-width: 100%;
+  padding: 10px;
+  vertical-align: top;
+}
+
+.card {
+  text-align: left;
+  border-radius: 2px;
+  background: #FFFFFF;
+  box-shadow:
+    0 2px 4px rgba(0,0,0,0.10),
+    0 1px 2px rgba(0,0,0,0.22);
+}
+
+.card img {
+  display: block;
+  width: 100%;
+}
+
+.card div {
+  padding: 16px 20px;
+  border-bottom: 1px solid #EEEEEE;
+}
+
+.card div h3 {
+  margin: 8px 0;
+  font-size: .9em;
+}
+
+.card div p {
+  margin: 8px 0;
+  font-size: .9em;
+}
+
+.button {
+  color: #FFC107;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: .8em;
+}
+
+.button:hover {
+  opacity: .7;
+}
+
+/* Стили для модального окна */
+.modal,
+.modal-box {
+  z-index: 900;
+}
+
+.modal-sandbox {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: transparent;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  overflow: auto;
+}
+
+.modal-box {
+  position: relative;
+  width: 80%;
+  max-width: 920px;
+  margin: 100px auto;
+  background: #FFFFFF;
+  animation-name: modalbox;
+  animation-duration: .3s;
+  animation-timing-function: ease-out;
+}
+
+.modal-header img {
+  width: 100%;
+}
+
+.modal-body {
+  padding: 60px 8%;
+}
+
+.modal-body h2 {
+  margin-bottom: 30px;
+  letter-spacing: .06em;
+}
+
+.modal-body p {
+  font-size: .9em;
+  line-height: 1.5em;
+}
+
+@keyframes modalbox {
+  0% {
+    top: -250px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+button {
+  min-width: 120px;
+  padding: 16px 32px;
+  margin: 24px 8px 0 0;
+  background: transparent;
+  text-decoration: none;
+  border: 1px solid #FFC107;
+  outline: none;
+  color: #FFC107;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #FFC107;
+  color: #FFFFFF;
+}
+
+button.disabled {
+  opacity: .4;
+  cursor: default;
+}
+
+@media (max-width: 620px) {
+  button {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+/* Медиа-запросы */
 @media (min-width: 800px) {
   .et-hero-tabs h1,
   .et-slide h2 {
@@ -273,13 +435,14 @@ a {
     width: 100%;
     height: auto;
   }
-  .about-thumbnail, .about-right {
+  .about-thumbnail,
+  .about-right {
     flex: 1 1 100%;
   }
   .about-card h5 {
     position: static;
-    font-size: 3rem;
     margin-top: 20px;
+    font-size: 3rem;
   }
   .about-card h6 {
     position: static;
@@ -296,26 +459,25 @@ a {
     flex-direction: column;
     align-items: center;
   }
-  .project-card {
+  .card {
     width: 90%;
   }
   .about-card {
     padding: 20px;
   }
-  .about-thumbnail, .about-right {
-    flex: 1 1 100%;
-  }
-  .social-links {
+  .social {
     flex-direction: column;
   }
-  .social-links a {
+  .social a {
     font-size: 1.5rem;
     margin: 8px 0;
   }
-  .contact-logo {
-    width: 40px;
-    font-size: 20px;
-    padding: 8px;
+}
+
+@media (max-width: 620px) {
+  button {
+    width: 100%;
+    min-width: auto;
   }
 }
 
@@ -331,19 +493,7 @@ a {
   .about-card h1 {
     font-size: 1rem;
   }
-  .about-author {
-    width: 130px;
-  }
   .about-right p {
     font-size: 0.8rem;
-  }
-  .contact-logo {
-    width: 30px;
-    font-size: 16px;
-    padding: 6px;
-  }
-  .social-links a {
-    font-size: 1.5rem;
-    margin: 8px 0;
   }
 }
