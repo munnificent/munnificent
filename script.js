@@ -86,20 +86,20 @@ class StickyNavigation {
 	// Данные статей в виде массива объектов
 	const posts = [
 	  {
-		postTitle: 'Заголовок статьи 1',
-		postAbstract: 'Краткое описание статьи 1.',
-		postContent: '<p>Полное содержание статьи 1.</p>',
+		postTitle: 'Физмыты',
+		postAbstract: 'Физматы: Почему они на самом деле Пушистые Единороги Академического Мира',
+		postContent: '<p><a href="https://vc.ru/u/1529828-your-name-1-your-name/948110-fizmaty-pochemu-oni-na-samom-dele-pushistye-edinorogi-akademicheskogo-mira">Почему Физматы на самом деле Пушистые Единороги Академического Мира</a></p>',
 		postThumb: 'https://picsum.photos/seed/article1/400/200',
 		postImg: 'https://picsum.photos/seed/article1/800/400',
-		postLink: '#',
+		postLink: 'https://vc.ru/u/1529828-your-name-1-your-name/948110-fizmaty-pochemu-oni-na-samom-dele-pushistye-edinorogi-akademicheskogo-mira',
 	  },
 	  {
-		postTitle: 'Заголовок статьи 2',
-		postAbstract: 'Краткое описание статьи 2.',
-		postContent: '<p>Полное содержание статьи 2.</p>',
+		postTitle: 'Чем дышит гуманитарий',
+		postAbstract: 'Вся таблица веществ.',
+		postContent: '<p>Когда нибудь ее допишу.</p>',
 		postThumb: 'https://picsum.photos/seed/article2/400/200',
 		postImg: 'https://picsum.photos/seed/article2/800/400',
-		postLink: '#',
+		postLink: 'https://vc.ru/u/1529828-your-name-1-your-name/948110-fizmaty-pochemu-oni-na-samom-dele-pushistye-edinorogi-akademicheskogo-mira',
 	  },
 	  // Добавьте дополнительные статьи по аналогии
 	];
