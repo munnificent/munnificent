@@ -44,7 +44,7 @@
 - [GitHub](https://github.com/munnificent)
 - [Instagram](https://www.instagram.com/munificent_archon/)
 - [Telegram](https://t.me/munificent_archon) 
-- Email: 
+- Email: не дам
 
 Буду рад любым предложениям и новым идеям! Добро пожаловать. 
 
