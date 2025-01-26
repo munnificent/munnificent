@@ -81,30 +81,29 @@ class StickyNavigation {
 	}
   }
   
-  // Код для функциональности карточек статей
   (() => {
-	// Данные статей в виде массива объектов
+	// Массив статей
 	const posts = [
 	  {
 		postTitle: 'Физмыты',
-		postAbstract: 'Физматы: Почему они на самом деле Пушистые Единороги Академического Мира',
-		postContent: '<p><a href="https://vc.ru/u/1529828-your-name-1-your-name/948110-fizmaty-pochemu-oni-na-samom-dele-pushistye-edinorogi-akademicheskogo-mira">Почему Физматы на самом деле Пушистые Единороги Академического Мира</a></p>',
+		postAbstract: 'Почему Физматы на самом деле Пушистые Единороги Академического Мира?',
+		postContent: '<p>Статья о том, как физматы влияют на развитие  вещество оборота в мире.</p>',
+		
+		// Прямая ссылка на внешний ресурс
+		originalLink: 'https://vc.ru/u/1529828-your-name-1-your-name/948110-fizmaty-pochemu-oni-na-samom-dele-pushistye-edinorogi-akademicheskogo-mira',
 		postThumb: 'https://picsum.photos/seed/article1/400/200',
-		postImg: 'https://picsum.photos/seed/article1/800/400',
-		postLink: 'https://vc.ru/u/1529828-your-name-1-your-name/948110-fizmaty-pochemu-oni-na-samom-dele-pushistye-edinorogi-akademicheskogo-mira',
+		postImg: 'https://picsum.photos/seed/article1/800/400'
 	  },
 	  {
 		postTitle: 'Чем дышит гуманитарий',
 		postAbstract: 'Вся таблица веществ.',
 		postContent: '<p>Когда нибудь ее допишу.</p>',
+		originalLink: '#',
 		postThumb: 'https://picsum.photos/seed/article2/400/200',
 		postImg: 'https://picsum.photos/seed/article2/800/400',
-		postLink: 'https://vc.ru/u/1529828-your-name-1-your-name/948110-fizmaty-pochemu-oni-na-samom-dele-pushistye-edinorogi-akademicheskogo-mira',
 	  },
-	  // Добавьте дополнительные статьи по аналогии
 	];
   
-	// Кэширование часто используемых элементов
 	const $postsBox = $('.posts-box');
 	const $modal = $('.modal');
 	const $innerImg = $('.inner-img');
@@ -113,7 +112,9 @@ class StickyNavigation {
 	const $prevPost = $('.prev-post');
 	const $nextPost = $('.next-post');
   
-	// Функция для отображения карточек статей
+	let currentPostIndex = 0;
+  
+	// Функция рендера карточек
 	function renderPosts() {
 	  $postsBox.empty();
   
@@ -121,15 +122,32 @@ class StickyNavigation {
 		const listItem = `
 		  <li>
 			<div class="card">
-			  <a class="button open-post" href="${post.postLink}" data-obj="${index}">
-				<img src="${post.postThumb}" alt="">
+			  <!-- Картинка-превью, кликая на неё можно открыть модалку или тоже вести напрямую -->
+			  <a class="button open-post" href="#" data-obj="${index}">
+				<img src="${post.postThumb}" alt="Превью статьи">
 			  </a>
+			  
 			  <div>
 				<h3>${post.postTitle}</h3>
 				<p>${post.postAbstract}</p>
 			  </div>
+			  
 			  <div>
-				<a class="button open-post" href="${post.postLink}" data-obj="${index}">Подробнее</a>
+				<!-- Кнопка 'Подробнее' - открывает модалку -->
+				<a class="button open-post" href="#" data-obj="${index}">
+				  Подробнее <i class="fas fa-book-open"></i>
+				</a>
+				
+				<!-- Новая кнопка для прямого перехода на статью -->
+				<a
+				  class="button"
+				  href="${post.originalLink}"
+				  target="_blank"
+				  rel="noopener noreferrer"
+				  style="margin-left: 10px;"
+				>
+				  Читать на сайте <i class="fas fa-external-link-alt"></i>
+				</a>
 			  </div>
 			</div>
 		  </li>`;
@@ -137,9 +155,7 @@ class StickyNavigation {
 	  });
 	}
   
-	// Функции для управления модальным окном
-	let currentPostIndex = 0;
-  
+	// Открываем модальное окно
 	function openModal(index) {
 	  currentPostIndex = index;
 	  updateModalContent(index);
@@ -159,7 +175,8 @@ class StickyNavigation {
 	}
   
 	function updateModalButtons() {
-	  $prevPost.add($nextPost).removeClass('disabled');
+	  $prevPost.removeClass('disabled');
+	  $nextPost.removeClass('disabled');
 	  if (currentPostIndex <= 0) {
 		$prevPost.addClass('disabled');
 	  }
@@ -168,7 +185,7 @@ class StickyNavigation {
 	  }
 	}
   
-	// Обработчики событий
+	// События клика
 	$(document).on('click', '.open-post', function (e) {
 	  e.preventDefault();
 	  const index = parseInt($(this).attr('data-obj'), 10);
@@ -176,15 +193,6 @@ class StickyNavigation {
 	});
   
 	$('.close-post, .modal-sandbox').on('click', closeModal);
-  
-	$nextPost.on('click', function (e) {
-	  e.preventDefault();
-	  if (currentPostIndex < posts.length - 1) {
-		currentPostIndex++;
-		updateModalContent(currentPostIndex);
-		updateModalButtons();
-	  }
-	});
   
 	$prevPost.on('click', function (e) {
 	  e.preventDefault();
@@ -195,9 +203,20 @@ class StickyNavigation {
 	  }
 	});
   
+	$nextPost.on('click', function (e) {
+	  e.preventDefault();
+	  if (currentPostIndex < posts.length - 1) {
+		currentPostIndex++;
+		updateModalContent(currentPostIndex);
+		updateModalButtons();
+	  }
+	});
+  
 	// Инициализация
 	$(document).ready(renderPosts);
   })();
   
+  
+  // Инициализация навигации
   new StickyNavigation();
   

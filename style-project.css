@@ -1,3 +1,4 @@
+/* ====== Сброс/базовые стили ====== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,7 +15,7 @@ a {
   color: inherit;
 }
 
-/* Общие стили для секций */
+/* ====== Общие стили секций ====== */
 .et-hero-tabs,
 .et-slide {
   display: flex;
@@ -38,11 +39,12 @@ a {
 .et-slide p {
   font-size: 1rem;
   letter-spacing: 0.05rem;
-  opacity: 0.7;
+  opacity: 0.8;
   max-width: 600px;
+  margin-bottom: 1rem;
 }
 
-/* Навигационные табы */
+/* ====== Sticky Tabs ====== */
 .et-hero-tabs-container {
   display: flex;
   position: absolute;
@@ -65,7 +67,7 @@ a {
   justify-content: center;
   align-items: center;
   color: #000;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   letter-spacing: 0.1rem;
   transition: all 0.3s ease;
 }
@@ -85,73 +87,88 @@ a {
   transition: left 0.3s ease, width 0.3s ease;
 }
 
-/* Секция "О нас" */
-.about-card {
-  position: relative;
-  width: 900px;
-  height: 450px;
-  margin: 100px auto;
-  background-color: #fff;
-  box-shadow: 10px 10px 93px rgba(0, 0, 0, 0.75);
+/* ====== Новая секция "Обо мне" (#tab-about) ====== */
+#tab-about {
+  background-color: #1b1b1b; 
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.about-thumbnail {
-  float: left;
-  position: relative;
-  left: 30px;
-  top: -30px;
-  width: 530px;
-  height: 320px;
-  box-shadow: 10px 10px 60px rgba(0, 0, 0, 0.75);
-  overflow: hidden;
-}
-
-.about-thumbnail img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+#tab-about .about-title {
+  max-width: 60%;
   width: 100%;
-  height: auto;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50px);
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 10px;
+  text-align: left; /* Для лучшей читаемости на больших экранах */
 }
 
-.about-right {
-  margin: 0 20px 0 590px;
+#tab-about .about-title span {
+  display: inline-block;
+  font-size: 5vw;
+  color: #efefef;
+  width: 100%;
+  text-transform: uppercase;
+  transform: translateY(150%);
+  animation: byBottom 1s ease both;
+  font-weight: 600;
+  letter-spacing: 0.25vw;
 }
 
-.about-right h1 {
-  padding-top: 15px;
-  font-size: 1.3rem;
-  color: #4B4B4B;
+#tab-about .about-title span:last-child {
+  font-size: 1rem;
+  animation: byBottom 1s 0.25s ease both;
 }
 
-.about-right p {
-  padding-top: 10px;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #4B4B4B;
-  text-align: justify;
+#tab-about .about-title span a {
+  position: relative;
+  display: inline-block;
+  margin-left: 0.5rem;
+  text-decoration: none;
+  color: #f7ca18;
 }
 
-.about-fab {
+#tab-about .about-title span a::after {
+  content: "";
+  height: 2px;
+  background-color: #f7ca18;
   position: absolute;
-  right: 50px;
-  bottom: -40px;
-  width: 80px;
-  height: 80px;
-  padding-top: 18px;
-  background-color: #1875D0;
-  color: #fff;
-  text-align: center;
-  border-radius: 50%;
-  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.75);
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  animation: linkAfter 0.5s 1s ease both;
 }
 
-.about-fab:hover {
-  background-color: #005bb5;
+#tab-about .about-title h3 {
+  color: #ddd;
+  font-size: 1rem;
+  font-weight: normal;
+  margin-top: 1rem;
+  line-height: 1.5;
 }
 
-/* Секция проектов */
+/* Анимации */
+@keyframes byBottom {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes linkAfter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30px;
+  }
+}
+
+/* ====== Секция проектов ====== */
 .projects-container {
   display: flex;
   flex-wrap: wrap;
@@ -176,16 +193,10 @@ a {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.45);
 }
 
-.imgContainer {
-  position: relative;
-}
-
 .imgContainer img {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
 }
 
 .content {
@@ -200,16 +211,15 @@ a {
 }
 
 .description {
-  height: 80px;
+  min-height: 50px;
   color: #555;
   text-align: justify;
-  overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .linkDiv {
   display: flex;
   justify-content: space-around;
-  margin-top: 15px;
 }
 
 .linkDiv a {
@@ -229,7 +239,7 @@ a {
   margin-left: 5px;
 }
 
-/* Социальные ссылки */
+/* ====== Социальные ссылки ====== */
 .social {
   display: flex;
   justify-content: center;
@@ -242,19 +252,14 @@ a {
   margin: 10px;
   color: #2D1F28;
   text-decoration: none;
+  transition: opacity 0.3s ease;
 }
 
-.social:hover a {
-  opacity: 0.5;
-  transition: 0.5s;
+.social a:hover {
+  opacity: 0.7;
 }
 
-.social:hover a:hover {
-  opacity: 1;
-}
-
-/* Стили для карточек статей */
-
+/* ====== Стили для карточек статей ====== */
 
 
 #tab-articles h2 {
@@ -262,7 +267,6 @@ a {
   margin-bottom: 20px;
 }
 
-/* Контейнер карточек */
 .posts-box {
   max-width: 1024px;
   margin: 0 auto;
@@ -279,31 +283,30 @@ a {
   vertical-align: top;
 }
 
-.card {
+.posts-box .card {
   text-align: left;
   border-radius: 2px;
   background: #FFFFFF;
-  box-shadow:
-    0 2px 4px rgba(0,0,0,0.10),
-    0 1px 2px rgba(0,0,0,0.22);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.10),
+              0 1px 2px rgba(0,0,0,0.22);
 }
 
-.card img {
+.posts-box .card img {
   display: block;
   width: 100%;
 }
 
-.card div {
+.posts-box .card div {
   padding: 16px 20px;
   border-bottom: 1px solid #EEEEEE;
 }
 
-.card div h3 {
+.posts-box .card div h3 {
   margin: 8px 0;
   font-size: .9em;
 }
 
-.card div p {
+.posts-box .card div p {
   margin: 8px 0;
   font-size: .9em;
 }
@@ -319,7 +322,7 @@ a {
   opacity: .7;
 }
 
-/* Стили для модального окна */
+/* ====== Модальное окно для статей ====== */
 .modal,
 .modal-box {
   z-index: 900;
@@ -395,6 +398,8 @@ button {
   outline: none;
   color: #FFC107;
   cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 button:hover {
@@ -407,53 +412,58 @@ button.disabled {
   cursor: default;
 }
 
-@media (max-width: 620px) {
-  button {
-    width: 100%;
-    min-width: auto;
-  }
+/* ======= Планы  ======= */
+#tab-plans {
+  background-color: #1b1b1b; 
 }
 
-/* Медиа-запросы */
-@media (min-width: 800px) {
+
+.statie {
+  margin-top: 40px;
+  color: #F0F5F8;
+  margin-bottom: 20px;
+} 
+
+.statiepod {
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  opacity: 0.8;
+  max-width: 600px;
+  margin-bottom: 1rem;
+  color: #F0F5F8;
+} 
+
+/* ======= Адаптивность (медиазапросы) ======= */
+
+/* ——— Экран не больше 1200px ——— */
+@media (max-width: 1200px) {
+  .about-title {
+    text-align: center; /* чтобы выравнивать по центру на более узких экранах */
+  }
   .et-hero-tabs h1,
   .et-slide h2 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .et-hero-tabs h3,
   .et-slide p {
-    font-size: 1.2rem;
-  }
-  .et-hero-tab {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 }
 
-@media (max-width: 1200px) {
-  .about-card {
-    flex-direction: column;
-    width: 100%;
-    height: auto;
+/* ——— Экран не больше 992px (планшеты) ——— */
+@media (max-width: 992px) {
+  /* Уменьшаем размеры карточек проектов */
+  .card {
+    width: 260px;
   }
-  .about-thumbnail,
-  .about-right {
-    flex: 1 1 100%;
-  }
-  .about-card h5 {
-    position: static;
-    margin-top: 20px;
-    font-size: 3rem;
-  }
-  .about-card h6 {
-    position: static;
-    font-size: 1.5rem;
-  }
-  .about-fab {
-    position: static;
-    margin-top: 20px;
+  
+  /* Отступы и шрифты в блоке "Обо мне" */
+  #tab-about .about-title span {
+    font-size: 7vw; /* немного увеличим масштаб текста, чтобы он оставался заметным */
   }
 }
 
+/* ——— Экран не больше 768px (планшеты/телефоны) ——— */
 @media (max-width: 768px) {
   .projects-container {
     flex-direction: column;
@@ -461,39 +471,66 @@ button.disabled {
   }
   .card {
     width: 90%;
+    margin-bottom: 20px;
   }
-  .about-card {
-    padding: 20px;
+  .et-hero-tabs h1 {
+    font-size: 1.8rem;
   }
-  .social {
-    flex-direction: column;
-  }
-  .social a {
-    font-size: 1.5rem;
-    margin: 8px 0;
-  }
-}
-
-@media (max-width: 620px) {
-  button {
-    width: 100%;
-    min-width: auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .et-hero-tabs h1,
-  .et-slide h2 {
-    font-size: 2rem;
-  }
-  .et-hero-tabs h3,
-  .et-slide p {
+  .et-hero-tabs h3 {
     font-size: 0.9rem;
   }
-  .about-card h1 {
-    font-size: 1rem;
+  
+  /* Блок "Обо мне" */
+  #tab-about .about-title {
+    max-width: 85%;
+    transform: none;
+    margin-top: 40px;
   }
-  .about-right p {
-    font-size: 0.8rem;
+  
+  #tab-about .about-title span {
+    font-size: 6vw;
+  }
+  
+  #tab-about .about-title h3 {
+    font-size: 0.9rem;
+  }
+}
+
+/* ——— Экран не больше 480px (смартфоны) ——— */
+@media (max-width: 480px) {
+  .et-hero-tabs h1 {
+    font-size: 1.6rem;
+  }
+  .et-hero-tabs h3 {
+    font-size: 0.85rem;
+  }
+  
+  /* Делаем табы поуже, чтобы не слипались */
+  .et-hero-tab {
+    font-size: 0.7rem;
+    padding: 0 5px;
+  }
+  
+  #tab-about .about-title span {
+    font-size: 8vw; 
+    letter-spacing: 0.2vw;
+  }
+  
+  #tab-about .about-title h3 {
+    font-size: 0.85rem;
+  }
+  
+  .projects-container {
+    padding: 20px 10px;
+  }
+  
+  /* Уменьшаем модальные отступы */
+  .modal-body {
+    padding: 20px;
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 12px 16px;
   }
 }

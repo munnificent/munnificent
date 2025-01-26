@@ -1,7 +1,7 @@
 {
     "name": "Munificent Портфолио",
     "short_name": "Munificent",
-    "description": "Портфолио разработчика Сагдатова Ескендир: проекты, статьи, планы и контакты.",
+    "description": "Портфолио Ескендыра: проекты, статьи, планы и контакты.",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#eeeeee",
